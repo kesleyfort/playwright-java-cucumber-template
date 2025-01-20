@@ -20,14 +20,6 @@ O projeto segue uma arquitetura em camadas, típica de projetos de automação d
 
 ```
 ├── src/
-│   ├── main/
-│   │   └── java/
-│   │       └── br/
-│   │           └── com/
-│   │               └── playwright/
-│   │                   ├── config/
-│   │                   └── utils/
-│   │
 │   └── test/
 │       ├── java/
 │       │   └── br/
@@ -164,14 +156,6 @@ The project follows a layered architecture, typical of test automation projects:
 
 ```
 ├── src/
-│   ├── main/
-│   │   └── java/
-│   │       └── br/
-│   │           └── com/
-│   │               └── playwright/
-│   │                   ├── config/
-│   │                   └── utils/
-│   │
 │   └── test/
 │       ├── java/
 │       │   └── br/
