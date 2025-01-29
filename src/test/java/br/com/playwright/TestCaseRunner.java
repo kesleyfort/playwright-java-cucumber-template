@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "src/test/java/br/com/playwright/features",
         glue = {"br.com.playwright.steps"},
-        plugin = {"pretty", "html:target/cucumber-reports.html", "tools.StepInfoPlugin"})
+        plugin = {"pretty", "html:target/cucumber-reports.html", "br.com.playwright.tools.StepInfoPlugin"})
 public class TestCaseRunner {
 
 }
