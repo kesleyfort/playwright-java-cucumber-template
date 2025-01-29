@@ -20,8 +20,7 @@ public class Hooks {
             browser = Playwright.create().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(argumentsList));
         } else if(getBrowser().equalsIgnoreCase("firefox")){
             browser = Playwright.create().firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
-        } else if(getBrowser().equalsIgnoreCase("perfecto")){
-        }
+        } else throw new IllegalArgumentException("Navegador inválido");
         context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(null));
         page = context.newPage();
