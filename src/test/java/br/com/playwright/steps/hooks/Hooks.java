@@ -7,11 +7,23 @@ import java.util.List;
 
 import static br.com.playwright.tools.LoadProperties.*;
 
+/**
+ * Classe responsável por gerenciar os hooks do Cucumber para configuração e limpeza do ambiente de teste.
+ */
 public class Hooks {
+    /** Instância do navegador utilizada nos testes. */
     static Browser browser;
+    /** Contexto do navegador para os testes. */
     static BrowserContext context;
+    /** Página atual do navegador. */
     public static Page page;
 
+    /**
+     * Configura o ambiente de teste antes da execução de cada cenário.
+     * Este método é executado antes de cada cenário de teste.
+     *
+     * @throws IllegalArgumentException se o navegador especificado não for suportado.
+     */
     @Before
     public void setup() {
         loadProperties();
@@ -27,6 +39,10 @@ public class Hooks {
         page.navigate(getURL());
     }
 
+    /**
+     * Limpa o ambiente de teste após a execução de cada cenário.
+     * Este método é executado após cada cenário de teste, fechando o contexto e o navegador.
+     */
     @After
     public void closeBrowser() {
         context.close();
